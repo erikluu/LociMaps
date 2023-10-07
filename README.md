@@ -1,5 +1,7 @@
 # LociMaps
 
+Shoutout Aidan Barbieux, Kaanan Kharwa, Kenny Lau, Ethan Wolfe, Sasank Madineni, Yasser Binbisher, and Trevor Kirkby (the GOAT)
+
 ## The Project
 LociMaps is an innovative project that introduces a "pirate" map for immersive navigation and reasoning across extensive knowledge bases. Leveraging cutting-edge machine learning techniques and insights from cognitive neuroscience and affective computing, this project aims to revolutionize the way users interact with and make sense of large volumes of information.
 
@@ -18,5 +20,3 @@ Customizable Experience: LociMaps is designed to be highly adaptable to differen
 ## Notes
 LociMaps stems from the [Method of Loci](https://en.wikipedia.org/wiki/Method_of_loci).
 > The method of loci is a strategy for memory enhancement, which uses visualizations of familiar spatial environments in order to enhance the recall of information.
-
-Previous work and ideas started with a class project group of mine in Winter 2023. We wanted to experiemnt if any of this was feasible. 
