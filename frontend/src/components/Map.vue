@@ -1,5 +1,7 @@
 <template>
-  <div ref="map"></div>
+  <selection>
+    <div ref="map" class="map"></div>
+  </selection>
 </template>
 
 <script>
@@ -8,7 +10,6 @@ import mapboxgl from 'mapbox-gl';
 export default {
   data() {
     return {
-      map: null,
       pins: [
         {
           longitude: -122.4194,
@@ -16,8 +17,8 @@ export default {
           color: 'blue' 
         },
         {
-          longitude: -43.2654, 
-          latitude: -22.9068,
+          longitude: 0, 
+          latitude: 0,
           color: 'red'
         }
       ]
@@ -29,14 +30,29 @@ export default {
 
     const map = new mapboxgl.Map({
         container: this.$refs.map,
-        style: "mapbox://styles/mapbox/streets-v12", // Replace with your preferred map style
-        center: [-71.224518, 42.213995],
-        zoom: 9,
+        style: {
+          version: 8,
+          name: "Empty",
+          metadata: {
+            "mapbox:autocomposite": true,
+          },
+          glyphs: "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
+          sources: {},
+          layers: [
+            {
+              id: "background",
+              type: "background",
+              paint: {
+                "background-color": "#F5E4CC",
+              },
+            },
+          ],
+        },
+        zoom: 8,
     });
 
     this.map = map;
     
-    // Add navigation controls 
     this.map.addControl(new mapboxgl.NavigationControl());
 
     this.map.on('load', () => {
@@ -48,22 +64,6 @@ export default {
           .addTo(this.map);
       });
 
-    //   Add land 
-      this.map.addSource('land', {
-        type: 'geojson',
-        data: 'https://docs.mapbox.com/mapbox-gl-js/assets/ne_110m_land.geojson'
-      });
-
-      this.map.addLayer({
-        id: 'land',
-        type: 'fill',
-        source: 'land',
-        layout: {},
-        paint: {
-          'fill-color': '#f08a24' 
-        }
-      });
-
     });
 
   }
@@ -71,9 +71,10 @@ export default {
 </script>
 
 <style scoped>
-  .map-container {
+  .map {
     position: absolute;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     z-index: 0;
   }
 </style>
