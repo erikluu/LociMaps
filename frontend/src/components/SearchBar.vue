@@ -46,6 +46,7 @@ input[type="text"] {
     margin: 1em;
     width: min(180px, 80%);
     transition: width 0.3s ease;
+    z-index: 1;
 }
 
 input[type="text"]:focus {
