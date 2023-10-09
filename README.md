@@ -15,7 +15,7 @@ Visualizations with Impact: Drawing inspiration from cognitive neuroscience and 
 
 Efficient Knowledge Discovery: Whether you're a researcher, student, or knowledge enthusiast, LociMaps ensures that your quest for information is both efficient and enjoyable. It transforms the often overwhelming task of navigating and reasoning with large knowledge bases into an engaging and insightful experience.
 
-Customizable Experience: LociMaps is designed to be highly adaptable to different domains and users' styles. Users will personalize their navigation experience, through their own work and documents making it a powerful tool for professionals across various industries.
+Customizable Experience: LociMaps is designed to be highly adaptable to different domains and user styles. Users will personalize their navigation experience through their own work and documents making it a powerful tool for professionals, hobbiests, and everyone inbetween.
 
 ## Notes
 LociMaps stems from the [Method of Loci](https://en.wikipedia.org/wiki/Method_of_loci).
